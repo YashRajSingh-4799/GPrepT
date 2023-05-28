@@ -1,122 +1,247 @@
 *,
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primaryColor: #282a57;
-    --secondaryColor: #e4e4e4;
+  --primaryColor: #282a57;
+  --secondaryColor: #e4e4e4;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--primaryColor);
-    color: var(--secondaryColor);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
 }
 
 .parallax-outer {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .parallax {
-    height: 110vh;
-    width: 100%;
-    position: relative;
+  height: 110vh;
+  width: 100%;
+  position: relative;
 }
 
 .parallax img {
-    position: absolute;
+  position: absolute;
 }
-
 
 .mountain-3,
 .mountain-2,
 .mountain-1 {
-    width: 100%;
-    bottom: 0;
-    z-index: 3;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
 }
 
 .mountain-2 {
-    bottom: 20px;
-    z-index: 2;
+  bottom: 20px;
+  z-index: 2;
 }
 
 .mountain-1 {
-    bottom: 40px;
-    z-index: 1;
+  bottom: 40px;
+  z-index: 1;
 }
 
 .sun {
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
 }
 
 .clouds-left {
-    left: 0;
-    width: 20%;
+  left: 0;
+  width: 20%;
 }
 
 .clouds-right {
-    right: 0;
-    width: 20%;
+  right: 0;
+  width: 20%;
 }
 
 .clouds-bottom {
-    bottom: 0px;
-    width: 100%;
+  bottom: 0px;
+  width: 100%;
 }
 
 .stars {
-    top: -550px;
-    left: 0;
-    width: 100%;
+  top: -550px;
+  left: 0;
+  width: 100%;
 }
 
 .copy {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    color: var(--secondaryColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
+  position: absolute;
+  bottom: 0%;
+  
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 0;
+  color: var(--secondaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
 }
 
 .copy h1 {
-    font-size: 10rem;
+  font-size: 10rem;
 }
 
 .copy span {
-    background-color: var(--secondaryColor);
-    color: var(--primaryColor);
-    padding: 1rem;
-    font-weight: 800;
-    border-radius: 0.5rem;
-    opacity: 0;
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  padding: 1rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  opacity: 0;
 }
 
 .about {
-    color: var(--secondaryColor);
-    padding-left: 10%;
-    padding-bottom: 20%;
+  color: var(--secondaryColor);
+  padding-left: 10%;
+  padding-bottom: 20%;
 }
 
 .about h2 {
-    color: var(--secondaryColor);
-    font-size: 5rem;
+  color: var(--secondaryColor);
+  font-size: 5rem;
 }
 
 .about p {
-    margin-top: 20px;
-    width: 50%;
+  margin-top: 20px;
+  width: 50%;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 999;
+}
+
+.navbar__list {
+  display: flex;
+  /* justify-content: center; */
+  list-style: none;
+  /* padding: 0;
+  margin: 0; */
+}
+
+.navbar__item {
+  margin: 10px 10px;
+  font-size: 30px;
+  align-self: center;
+}
+
+.navbar__link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pd {
+  padding-bottom: -40px;
+}
+
+.logo {
+  border-radius: 50%;
+}
+.btncontainer {
+  display: flex;
+}
+.btn {
+  background-color: aqua;
+  /* border-radius:5%; */
+  font-size: 30px;
+  /* width: 240px; */
+  /* height: 60%; */
+  align-self: center;
+  justify-self: end;
+  /* justify-self: end; */
+}
+
+/* Navbar */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 9999;
+}
+
+/* Style for the title */
+.navbar-title {
+  font-size: 40px;
+  font-weight: bold;
+  align-content: center;
+  color: white;
+}
+
+/* Style for the links */
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Style for the Telegram link button */
+/* Style for the Telegram link button */
+.telegram-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0088cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.telegram-button:hover {
+  transform: scale(1.05);
+}
+
+
+
+ /* Style for the title logo */
+        
+        
+        .gpt-logo {
+            width: 60px;
+            height: 60px;
+            margin-top: 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+            /* margin-right: 10px; */
+        }
